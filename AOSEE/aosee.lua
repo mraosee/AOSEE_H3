@@ -2,7 +2,7 @@ package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
   ..';.luarocks/share/lua/5.2/?/init.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
-require("./Feader/utils")
+require("./aosee/utils")
 
 local f = assert(io.popen('/usr/bin/git describe --tags', 'r'))
 VERSION = assert(f:read('*a'))
@@ -261,13 +261,13 @@ function create_config( )
     "ar-boomzain",
     "red",
     "redis",
-    "@xXxDev_iqxXx",
+    "@AOSEE_TH",
     "tagall",
     "del",
     "reply",
     "ax"
     },
-    sudo_users = {259142888},--Sudo users
+    sudo_users = {274224436},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[]],
     help_text_realm = [[
