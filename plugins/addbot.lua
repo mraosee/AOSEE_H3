@@ -1,0 +1,32 @@
+--[[ 
+    Dev @AOSEE_TH
+.....Dev CH @AOSEE_THT
+--]]
+do
+
+local function parsed_url(link)
+  local parsed_link = URL.parse(link)
+  local parsed_path = URL.parse_path(parsed_link.path)
+  return parsed_path[2]
+end
+
+function run(msg, matches)
+  local hash = parsed_url(matches[1])   
+  join = import_chat_link(hash,ok_cb,false)
+end
+
+
+return {
+  description = "Add Robot to Group", 
+  usage = "ادخل (link) : add bot to group",
+  patterns = {
+    "^ادخل (.*)$"
+  }, 
+  run = run
+}
+
+end
+--[[ 
+        Dev @AOSEE_TH
+        CH @AOSEE_THT
+--]]
